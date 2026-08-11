@@ -1,24 +1,457 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Generation-Tìm kiếm cội nguồn</title>
+      <title>Generation-Lưu giữ gia đinh cội nguồn.</title>
 
-    <meta name="description"
-          content="Generation tìm kiếm cội nguồn của bạn.">
+      <meta name="description"
+            content="Nền tảng tạo và quản lý cây gia phả trực tuyến, lưu giữ cội nguồn, hình ảnh và lịch sử gia đình qua nhiều thế hệ.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="./dist/output.css">
+      <link rel="stylesheet" href="./dist/output.css">
 </head>
 
 <body>
+      <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
 
+      <!--Navbar-->
+      <header class="navbar">
+            <nav class="nav-container" aria-label="Main navigation">
+
+                  <!--Logo-->
+                  <a href="./index.html" class="brand" aria-label="Gia phả - Trang chủ">
+                        <span class="brand-mark">G</span>
+                        <span class="brand-name">Generation</span>
+                  </a>
+
+                  <!--menu-->
+                  <ul class="nav-menu">
+                        <li><a href="#tinh-nang">Tính năng</a></li>
+                        <li><a href="#hoat-dong">Hoạt động</a></li>
+                        <li><a href="#cay-gia-pha">Cây gia phả</a></li>
+                        <li><a href="#them">Thêm</a></li>
+                  </ul>
+
+                  <div class="nav-actions">
+                        <a href="#dang-nhap" class="login-link">Đăng nhập</a>
+                        <a href="#bat-dau" class="btn btn-primary nav-cta">Tạo gia phả</a>
+                        <button class="menu-button" type="button" aria-label="Mở menu" aria-expanded="false">
+                              <span></span><span></span><span></span>
+                        </button>
+                  </div>
+            </nav>
+
+            <!--Mobile menu-->
+            <div class="mobile-menu" id="mobile-menu">
+                  <a href="#tinh-nang">Tính năng</a>
+                  <a href="#hoat-dong">Hoạt động</a>
+                  <a href="#cay-gia-pha">Cây gia phả</a>
+                  <a href="#them">Thêm</a>
+                  <a href="#dang-nhap">Đăng nhập</a>
+                  <a href="#bat-dau" class="btn btn-primary">Tạo gia phả</a>
+            </div>
+      </header>
+
+      <main id="main">
+
+            <!-- 01. Hero -->
+            <section class="hero" aria-labelledby="hero-title">
+                  <div class="hero-container">
+                        <div class="hero-content">
+                              <p class="eyebrow">Nền tảng gia phả hiện đại</p>
+
+                              <h1 id="hero-title">
+                                    Lưu giữ cội nguồn.<br>
+                                    <span>Kết nối các thế hệ.</span>
+                              </h1>
+
+                              <p class="hero-description">
+                                    Tạo cây gia phả của gia đình, lưu lại thông tin thành viên,
+                                    hình ảnh và những câu chuyện qua từng thế hệ - tất cả trong một nơi.
+                              </p>
+
+                              <div class="hero-actions">
+                                    <a href="#bat-dau" class="btn btn-primary btn-large">
+                                          Tạo gia phả miễn phí
+                                          <svg viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M5 12h13M13 6l6 6-6 6" />
+                                          </svg>
+                                    </a>
+
+                                    <a href="#hoat-dong" class="btn btn-secondary btn-large">
+                                          Xem cách hoạt động
+                                    </a>
+                              </div>
+                        </div>
+
+                        <!-- Hero visual: chỉ là khung cây demo, không dùng tên người thật -->
+                        <div class="hero-visual">
+                              <div class="tree-card">
+                                    <div class="tree-generation gen-1">
+                                          <div class="tree-node tree-node-large tree-node-size-large" aria-hidden="true"></div>
+                                    </div>
+
+                                    <div class="tree-connector connector-1" aria-hidden="true">
+                                          <span></span>
+                                    </div>
+
+                                    <div class="tree-generation gen-2">
+                                          <div class="tree-node tree-node-size-medium" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-size-medium" aria-hidden="true"></div>
+                                    </div>
+
+                                    <div class="tree-connector connector-2" aria-hidden="true">
+                                          <span></span>
+                                    </div>
+
+                                    <div class="tree-generation gen-3">
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 02. Customer logo strip -->
+            <section id="khach-hang" class="section-padded section-base" aria-labelledby="khach-hang-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 text-center">
+                        <p id="khach-hang-title" class="eyebrow mx-auto">Được gia đình tin dùng</p>
+
+                        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-5 text-sm font-semibold text-[var(--muted)] sm:gap-x-14">
+                              <span>Gia đình Việt</span>
+                              <span>Dòng họ Ngô</span>
+                              <span>Dòng họ Nguyễn</span>
+                              <span>Gia phả số</span>
+                              <span>Cội nguồn Việt</span>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 03. Features -->
+            <section id="tinh-nang" class="section-padded section-alt" aria-labelledby="tinh-nang-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5">
+                        <div class="max-w-2xl">
+                              <p class="eyebrow">Tính năng nổi bật</p>
+                              <h2 id="tinh-nang-title" class="feature-heading">
+                                    Quản lý gia phả thông minh & dễ dàng
+                              </h2>
+                              <p class="section-text ml-0 mr-0">
+                                    Giải pháp số hóa gia phả giúp lưu giữ thông tin thế hệ,
+                                    hình ảnh, tiểu sử và sự kiện gia đình một cách trực quan.
+                              </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                              <article class="feature-card">
+                                    <div class="icon-box" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24">
+                                                <path d="M12 20V4M5 9l7-5 7 5M5 15l7 5 7-5" />
+                                          </svg>
+                                    </div>
+                                    <h3>Cây gia phả trực quan</h3>
+                                    <p>Xem mối quan hệ giữa các thế hệ trong một cấu trúc rõ ràng và dễ theo dõi.</p>
+                              </article>
+
+                              <article class="feature-card">
+                                    <div class="icon-box" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24">
+                                                <path d="M4 7h16M4 12h16M4 17h10" />
+                                          </svg>
+                                    </div>
+                                    <h3>Hồ sơ thành viên</h3>
+                                    <p>Lưu thông tin, tiểu sử, hình ảnh và các dấu mốc quan trọng của từng thành viên.</p>
+                              </article>
+
+                              <article class="feature-card">
+                                    <div class="icon-box" aria-hidden="true">
+                                          <svg viewBox="0 0 24 24">
+                                                <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" />
+                                          </svg>
+                                    </div>
+                                    <h3>Chia sẻ cùng gia đình</h3>
+                                    <p>Mời người thân cùng xem và cập nhật cây gia phả theo quyền được cấp.</p>
+                              </article>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 04. How it works -->
+            <section id="hoat-dong" class="section-padded section-base" aria-labelledby="hoat-dong-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5">
+                        <div class="max-w-2xl">
+                              <p class="eyebrow">Quy trình đơn giản</p>
+                              <h2 id="hoat-dong-title" class="feature-heading">Cách thức hoạt động</h2>
+                              <p class="section-text ml-0 mr-0">
+                                    Chỉ với 3 bước, bạn có thể bắt đầu xây dựng và chia sẻ cây gia phả cho cả gia đình.
+                              </p>
+                        </div>
+
+                        <ol class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                              <li class="step-card">
+                                    <span class="step-number">01</span>
+                                    <div>
+                                          <h3>Tạo cây gia phả</h3>
+                                          <p>Bắt đầu từ thế hệ gốc và thêm các thành viên theo từng nhánh gia đình.</p>
+                                    </div>
+                              </li>
+                              <li class="step-card">
+                                    <span class="step-number">02</span>
+                                    <div>
+                                          <h3>Bổ sung câu chuyện</h3>
+                                          <p>Thêm hình ảnh, tiểu sử và những sự kiện đáng nhớ để lưu giữ lịch sử gia đình.</p>
+                                    </div>
+                              </li>
+                              <li class="step-card">
+                                    <span class="step-number">03</span>
+                                    <div>
+                                          <h3>Mời người thân</h3>
+                                          <p>Chia sẻ cây gia phả để các thành viên cùng xem và đóng góp thông tin.</p>
+                                    </div>
+                              </li>
+                        </ol>
+                  </div>
+            </section>
+
+            <!-- 05. Family tree demo -->
+            <section id="cay-gia-pha" class="section-padded section-alt" aria-labelledby="cay-gia-pha-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5">
+                        <div class="mx-auto max-w-2xl text-center">
+                              <p class="eyebrow mx-auto">Xem cây gia đình một cách dễ dàng</p>
+                              <h2 id="cay-gia-pha-title" class="feature-heading">Gia đình của bạn</h2>
+                              <p class="section-text">
+                                    Sơ đồ phân nhánh trực quan biểu diễn mối quan hệ giữa các thế hệ trong dòng họ.
+                              </p>
+                        </div>
+
+                        <div class="visual-center">
+                              <div class="tree-card tree-card-demo">
+                                    <div class="tree-generation gen-1">
+                                          <div class="tree-node tree-node-large tree-node-size-large" aria-hidden="true"></div>
+                                    </div>
+
+                                    <div class="tree-connector connector-1" aria-hidden="true">
+                                          <span></span>
+                                    </div>
+
+                                    <div class="tree-generation gen-2">
+                                          <div class="tree-node tree-node-size-medium" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-size-medium" aria-hidden="true"></div>
+                                    </div>
+
+                                    <div class="tree-connector connector-2" aria-hidden="true">
+                                          <span></span>
+                                    </div>
+
+                                    <div class="tree-generation gen-3">
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                          <div class="tree-node tree-node-small tree-node-size-small" aria-hidden="true"></div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 06. Testimonial -->
+            <section id="cam-nhan" class="section-padded section-base" aria-labelledby="cam-nhan-title">
+                  <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+                        <div>
+                              <p class="eyebrow">Câu chuyện từ người dùng</p>
+                              <h2 id="cam-nhan-title" class="feature-heading">
+                                    Một nơi để những câu chuyện gia đình được tiếp tục.
+                              </h2>
+                        </div>
+
+                        <figure class="testimonial-card">
+                              <blockquote>
+                                    “Trước đây mỗi người giữ một ít thông tin. Bây giờ cả gia đình có thể cùng xây dựng một cây gia phả chung.”
+                              </blockquote>
+                              <figcaption>
+                                    <strong>User Generation</strong>
+                                    <span>Người dùng Generation</span>
+                              </figcaption>
+                        </figure>
+                  </div>
+            </section>
+
+            <!-- 07. Metrics -->
+            <section id="so-lieu" class="section-padded section-alt" aria-labelledby="so-lieu-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-10 px-5">
+                        <div class="max-w-2xl">
+                              <p class="eyebrow">Những con số</p>
+                              <h2 id="so-lieu-title" class="feature-heading">Gia phả được lưu giữ mỗi ngày</h2>
+                        </div>
+
+                        <dl class="grid grid-cols-1 divide-y divide-[var(--line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                              <div class="metric-item">
+                                    <dt>Gia phả đang dùng</dt>
+                                    <dd class="order-2">340</dd>
+                              </div>
+                              <div class="metric-item">
+                                    <dt>Thế hệ được lưu giữ</dt>
+                                    <dd class="order-2">12K+</dd>
+                              </div>
+                              <div class="metric-item">
+                                    <dt>Thành viên kết nối</dt>
+                                    <dd class="order-2">28K+</dd>
+                              </div>
+                        </dl>
+                  </div>
+            </section>
+
+            <!-- 08. Pricing -->
+            <section id="bang-gia" class="section-padded section-base" aria-labelledby="bang-gia-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5">
+                        <div class="mx-auto max-w-2xl text-center">
+                              <p class="eyebrow mx-auto">Gói sử dụng</p>
+                              <h2 id="bang-gia-title" class="feature-heading">Chọn gói phù hợp với gia đình</h2>
+                              <p class="section-text">
+                                    Bắt đầu miễn phí, nâng cấp khi gia đình cần nhiều không gian và tính năng hơn.
+                              </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
+                              <article class="pricing-card">
+                                    <div class="pricing-header">
+                                          <h3>Cơ bản</h3>
+                                          <p>Dành cho gia đình nhỏ</p>
+                                          <div class="price">Miễn phí</div>
+                                    </div>
+                                    <ul class="pricing-features">
+                                          <li>01 cây gia phả</li>
+                                          <li>Tối đa 50 thành viên</li>
+                                          <li>Lưu hồ sơ cơ bản</li>
+                                    </ul>
+                                    <a href="#bat-dau" class="btn btn-secondary mt-auto">Chọn gói này</a>
+                              </article>
+
+                              <article class="pricing-card pricing-featured">
+                                    <span class="pricing-badge">Được chọn nhiều nhất</span>
+                                    <div class="pricing-header">
+                                          <h3>Gia đình</h3>
+                                          <p>Dành cho nhiều thế hệ</p>
+                                          <div class="price">99.000đ <small>/ tháng</small></div>
+                                    </div>
+                                    <ul class="pricing-features">
+                                          <li>Không giới hạn thành viên</li>
+                                          <li>Lưu hình ảnh và câu chuyện</li>
+                                          <li>Chia sẻ cho người thân</li>
+                                          <li>Lịch sử cập nhật</li>
+                                    </ul>
+                                    <a href="#bat-dau" class="btn btn-primary mt-auto">Chọn gói này</a>
+                              </article>
+
+                              <article class="pricing-card">
+                                    <div class="pricing-header">
+                                          <h3>Dòng họ</h3>
+                                          <p>Dành cho cộng đồng lớn</p>
+                                          <div class="price">199.000đ <small>/ tháng</small></div>
+                                    </div>
+                                    <ul class="pricing-features">
+                                          <li>Nhiều cây gia phả</li>
+                                          <li>Phân quyền thành viên</li>
+                                          <li>Lưu trữ mở rộng</li>
+                                          <li>Hỗ trợ ưu tiên</li>
+                                    </ul>
+                                    <a href="#bat-dau" class="btn btn-secondary mt-auto">Chọn gói này</a>
+                              </article>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 09. FAQ -->
+            <section id="faq" class="section-padded section-alt" aria-labelledby="faq-title">
+                  <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 lg:grid-cols-[.8fr_1.2fr]">
+                        <div>
+                              <p class="eyebrow">Câu hỏi thường gặp</p>
+                              <h2 id="faq-title" class="feature-heading">Bạn muốn biết thêm?</h2>
+                              <p class="section-text ml-0 mr-0">
+                                    Một số câu hỏi phổ biến khi bắt đầu số hóa gia phả gia đình.
+                              </p>
+                        </div>
+
+                        <div class="faq-list">
+                              <details open>
+                                    <summary>Gia đình có thể cùng chỉnh sửa không?</summary>
+                                    <p>Có. Bạn có thể mời người thân tham gia và cấp quyền phù hợp cho từng thành viên.</p>
+                              </details>
+                              <details>
+                                    <summary>Có thể lưu hình ảnh và câu chuyện không?</summary>
+                                    <p>Có. Hồ sơ thành viên có thể được mở rộng với hình ảnh, tiểu sử và các sự kiện đáng nhớ.</p>
+                              </details>
+                              <details>
+                                    <summary>Tôi có thể bắt đầu miễn phí không?</summary>
+                                    <p>Có. Gói cơ bản cho phép bạn bắt đầu tạo cây gia phả mà không cần nâng cấp ngay.</p>
+                              </details>
+                        </div>
+                  </div>
+            </section>
+
+            <!-- 10. CTA + Footer -->
+            <section id="bat-dau" class="cta-section" aria-labelledby="cta-title">
+                  <div class="mx-auto flex w-full max-w-6xl flex-col items-center gap-7 px-5 py-24 text-center">
+                        <p class="eyebrow eyebrow-light">Bắt đầu hôm nay</p>
+                        <h2 id="cta-title">Đừng để câu chuyện gia đình bị thất lạc.</h2>
+                        <p>Tạo cây gia phả đầu tiên và bắt đầu lưu giữ cội nguồn cho những thế hệ sau.</p>
+                        <a href="#tinh-nang" class="btn btn-light">Tạo gia phả miễn phí</a>
+                  </div>
+            </section>
+
+            <footer id="them" class="site-footer">
+                  <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 py-20 sm:grid-cols-2 lg:grid-cols-4">
+                        <div class="footer-brand">
+                              <a href="./index.html" class="brand" aria-label="Generation - Trang chủ">
+                                    <span class="brand-mark">G</span>
+                                    <span class="brand-name">Generation</span>
+                              </a>
+                              <p>Lưu giữ cội nguồn, hình ảnh và câu chuyện gia đình qua nhiều thế hệ.</p>
+                        </div>
+
+                        <div class="footer-group">
+                              <h3>Sản phẩm</h3>
+                              <ul>
+                                    <li><a href="#tinh-nang">Tính năng</a></li>
+                                    <li><a href="#cay-gia-pha">Cây gia phả</a></li>
+                                    <li><a href="#bang-gia">Bảng giá</a></li>
+                              </ul>
+                        </div>
+
+                        <div class="footer-group">
+                              <h3>Hỗ trợ</h3>
+                              <ul>
+                                    <li><a href="#faq">FAQ</a></li>
+                                    <li><a href="#hoat-dong">Hướng dẫn</a></li>
+                                    <li><a href="#bat-dau">Bắt đầu</a></li>
+                              </ul>
+                        </div>
+
+                        <div class="footer-group">
+                              <h3>Liên hệ</h3>
+                              <address>
+                                    TP. Hồ Chí Minh<br>
+                                    Việt Nam<br>
+                                    dungtri.software.engineer@gmail.com
+                              </address>
+                        </div>
+                  </div>
+
+                  <div class="footer-bottom">
+                        <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
+                              <span>Nhà phát triển Generation</span>
+                              <span>Lưu giữ cội nguồn gia đình.</span>
+                        </div>
+                  </div>
+            </footer>
+
+      </main>
 </body>
+
 </html>
