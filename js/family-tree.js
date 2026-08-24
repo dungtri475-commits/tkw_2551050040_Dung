@@ -121,6 +121,16 @@ function saveTrees() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(trees));
 }
 
+function readSavedTrees() {
+  try {
+    const savedTrees = localStorage.getItem(STORAGE_KEY);
+    return savedTrees ? JSON.parse(savedTrees) : null;
+  } catch {
+    localStorage.removeItem(STORAGE_KEY);
+    return null;
+  }
+}
+
 function validateField(field) {
   let message = "";
 
@@ -187,8 +197,8 @@ async function loadRecords() {
     loading.hidden = true;
     sampleTrees = data.familyTrees;
 
-    const savedTrees = localStorage.getItem(STORAGE_KEY);
-    trees = savedTrees ? JSON.parse(savedTrees) : [...sampleTrees];
+    const savedTrees = readSavedTrees();
+    trees = savedTrees ?? [...sampleTrees];
 
     if (!savedTrees) {
       saveTrees();
