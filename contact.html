@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên hệ — Generation</title>
+    <meta name="description" content="Liên hệ với đội ngũ Generation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body>
+    <header
+      class="border-b border-line bg-surface/95 dark:border-line-invert dark:bg-surface-dark"
+    >
+      <div
+        class="container flex min-h-18 items-center justify-between px-5 sm:px-8"
+      >
+        <a href="index.html" class="text-lg font-extrabold text-brand"
+          >generation.</a
+        >
+        <nav class="hidden gap-7 text-sm font-semibold lg:flex">
+          <a href="index.html#tinh-nang">Tính năng</a
+          ><a href="pricing.html">Bảng giá</a
+          ><a class="text-brand" href="contact.html">Liên hệ</a>
+        </nav>
+        <div class="flex gap-2">
+          <button
+            class="btn btn-ghost min-h-9 px-3"
+            data-theme-toggle
+            aria-label="Đổi giao diện sáng tối"
+          >
+            ◐</button
+          ><a class="btn btn-primary hidden sm:inline-flex" href="#lien-he"
+            >Gửi lời nhắn</a
+          ><button
+            class="btn btn-ghost min-h-9 px-3 lg:hidden"
+            aria-label="Mở menu"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container grid gap-10 lg:grid-cols-[.85fr_1.15fr]">
+          <aside>
+            <span class="eyebrow">Chúng tôi luôn lắng nghe</span>
+            <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">
+              Cùng lưu giữ những điều quan trọng.
+            </h1>
+            <p
+              class="mt-5 max-w-md leading-7 text-ink-soft dark:text-ink-invert/70"
+            >
+              Bạn cần hỗ trợ, muốn góp ý hoặc hỏi về gói dành cho dòng họ? Hãy
+              gửi lời nhắn cho đội ngũ Generation.
+            </p>
+            <div class="mt-9 space-y-5">
+              <div>
+                <p class="text-sm font-bold">Email</p>
+                <a class="text-sm text-brand" href="mailto:hello@generation.vn"
+                  >hello@generation.vn</a
+                >
+              </div>
+              <div>
+                <p class="text-sm font-bold">Thời gian phản hồi</p>
+                <p class="text-sm text-ink-soft dark:text-ink-invert/70">
+                  Thứ Hai–Thứ Sáu, trong vòng 24 giờ.
+                </p>
+              </div>
+              <div>
+                <p class="text-sm font-bold">Văn phòng</p>
+                <p class="text-sm text-ink-soft dark:text-ink-invert/70">
+                  Quận 3, Thành phố Hồ Chí Minh.
+                </p>
+              </div>
+            </div>
+          </aside>
+          <form id="lien-he" class="card" action="#da-gui" method="get">
+            <h2 class="text-2xl font-extrabold">Gửi lời nhắn</h2>
+            <p class="mt-2 text-sm text-ink-soft dark:text-ink-invert/70">
+              Các trường có dấu * là bắt buộc.
+            </p>
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="field-label" for="ho-ten"
+                  >Họ và tên
+                  <span class="text-red-600" aria-hidden="true">*</span></label
+                ><input
+                  class="field-input"
+                  id="ho-ten"
+                  name="hoTen"
+                  type="text"
+                  autocomplete="name"
+                  required
+                  aria-describedby="ho-ten-error"
+                />
+                <p class="field-error" id="ho-ten-error" role="alert"></p>
+              </div>
+              <div>
+                <label class="field-label" for="email"
+                  >Email
+                  <span class="text-red-600" aria-hidden="true">*</span></label
+                ><input
+                  class="field-input"
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  aria-describedby="email-error"
+                />
+                <p class="field-error" id="email-error" role="alert"></p>
+              </div>
+              <div>
+                <label class="field-label" for="dien-thoai"
+                  >Số điện thoại
+                  <span class="text-red-600" aria-hidden="true">*</span></label
+                ><input
+                  class="field-input"
+                  id="dien-thoai"
+                  name="dienThoai"
+                  type="tel"
+                  required
+                  pattern="0[0-9]{9}"
+                  autocomplete="tel"
+                  inputmode="numeric"
+                  aria-describedby="dien-thoai-hint dien-thoai-error"
+                />
+                <p
+                  class="mt-1.5 text-xs text-ink-soft dark:text-ink-invert/60"
+                  id="dien-thoai-hint"
+                >
+                  Chúng tôi gọi qua số này, không nhắn tin quảng cáo.
+                </p>
+                <p class="field-error" id="dien-thoai-error" role="alert"></p>
+              </div>
+              <div>
+                <label class="field-label" for="chu-de"
+                  >Chủ đề
+                  <span class="text-red-600" aria-hidden="true">*</span></label
+                ><select
+                  class="field-input"
+                  id="chu-de"
+                  name="chuDe"
+                  required
+                  aria-describedby="chu-de-error"
+                >
+                  <option value="">Chọn chủ đề</option>
+                  <option>Hỗ trợ tài khoản</option>
+                  <option>Tư vấn bảng giá</option>
+                  <option>Góp ý sản phẩm</option>
+                </select>
+                <p class="field-error" id="chu-de-error" role="alert"></p>
+              </div>
+            </div>
+            <div class="mt-5">
+              <label class="field-label" for="loi-nhan"
+                >Lời nhắn
+                <span class="text-red-600" aria-hidden="true">*</span></label
+              ><textarea
+                class="field-input min-h-32 resize-y"
+                id="loi-nhan"
+                name="loiNhan"
+                required
+                aria-describedby="loi-nhan-error"
+              ></textarea>
+              <p class="field-error" id="loi-nhan-error" role="alert"></p>
+            </div>
+            <label
+              class="mt-2 flex cursor-pointer items-start gap-3 text-sm leading-6"
+              ><input
+                class="mt-1 size-4 accent-brand"
+                type="checkbox"
+                name="dongY"
+                required
+              /><span
+                >Tôi đồng ý để Generation liên hệ lại về nội dung yêu cầu.
+                <span class="text-red-600" aria-hidden="true">*</span></span
+              ></label
+            ><button
+              class="btn btn-primary mt-6 w-full sm:w-auto"
+              type="submit"
+            >
+              Gửi lời nhắn
+            </button>
+          </form>
+        </div>
+      </section>
+      <section
+        id="da-gui"
+        class="section bg-surface-alt dark:bg-surface-dark-alt"
+      >
+        <div class="container grid gap-5 sm:grid-cols-3">
+          <div class="card">
+            <p class="text-2xl">1</p>
+            <h2 class="mt-4 font-bold">Bạn gửi lời nhắn</h2>
+            <p class="mt-2 text-sm text-ink-soft dark:text-ink-invert/70">
+              Điền thông tin và mô tả điều bạn cần hỗ trợ.
+            </p>
+          </div>
+          <div class="card">
+            <p class="text-2xl">2</p>
+            <h2 class="mt-4 font-bold">Chúng tôi tiếp nhận</h2>
+            <p class="mt-2 text-sm text-ink-soft dark:text-ink-invert/70">
+              Đội ngũ phân loại yêu cầu để phản hồi đúng người.
+            </p>
+          </div>
+          <div class="card">
+            <p class="text-2xl">3</p>
+            <h2 class="mt-4 font-bold">Cùng tìm giải pháp</h2>
+            <p class="mt-2 text-sm text-ink-soft dark:text-ink-invert/70">
+              Bạn nhận phản hồi qua email hoặc số điện thoại đã cung cấp.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="border-t border-line dark:border-line-invert">
+      <div
+        class="container grid gap-8 px-5 py-10 sm:grid-cols-2 sm:px-8 lg:grid-cols-4"
+      >
+        <div>
+          <a href="index.html" class="text-lg font-extrabold text-brand"
+            >generation.</a
+          >
+          <p class="mt-3 text-sm text-ink-soft dark:text-ink-invert/60">
+            Gìn giữ cội nguồn cho hôm nay và mai sau.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-bold">Khám phá</h2>
+          <a
+            class="mt-3 block text-sm text-ink-soft dark:text-ink-invert/60"
+            href="index.html#tinh-nang"
+            >Tính năng</a
+          >
+        </div>
+        <div>
+          <h2 class="font-bold">Hỗ trợ</h2>
+          <a
+            class="mt-3 block text-sm text-ink-soft dark:text-ink-invert/60"
+            href="pricing.html"
+            >Bảng giá</a
+          >
+        </div>
+        <div>
+          <h2 class="font-bold">Sẵn sàng bắt đầu?</h2>
+          <a
+            class="mt-3 inline-block text-sm font-semibold text-brand"
+            href="pricing.html"
+            >Xem bảng giá →</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      document
+        .querySelector("[data-theme-toggle]")
+        .addEventListener("click", () =>
+          document.documentElement.classList.toggle("dark"),
+        );
+    </script>
+  </body>
+</html>
