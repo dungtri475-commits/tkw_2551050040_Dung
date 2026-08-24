@@ -1,0 +1,202 @@
+{
+  "site": {
+    "name": "Generation",
+    "tagline": "Lưu giữ cội nguồn, kết nối các thế hệ.",
+    "description": "Nền tảng tạo và lưu giữ cây gia phả trực tuyến cho gia đình Việt.",
+    "locale": "vi-VN",
+    "currency": "VND",
+    "contactEmail": "doinguNexOptima-Tech@gamil.com",
+    "location": "TP. Hồ Chí Minh, Việt Nam"
+  },
+  "navigation": [
+    { "label": "Tính năng", "href": "index.html#tinh-nang" },
+    { "label": "Cây gia phả", "href": "index.html#cay-gia-pha" },
+    { "label": "Bảng giá", "href": "pricing.html" },
+    { "label": "Liên hệ", "href": "contact.html" }
+  ],
+  "features": [
+    {
+      "id": "family-tree",
+      "title": "Cây gia phả trực quan",
+      "description": "Xem mối quan hệ giữa các thế hệ trong một cấu trúc rõ ràng, dễ theo dõi.",
+      "icon": "tree"
+    },
+    {
+      "id": "member-profile",
+      "title": "Hồ sơ thành viên",
+      "description": "Lưu thông tin, tiểu sử, hình ảnh và các dấu mốc quan trọng của từng thành viên.",
+      "icon": "profile"
+    },
+    {
+      "id": "family-sharing",
+      "title": "Chia sẻ cùng gia đình",
+      "description": "Mời người thân cùng xem và cập nhật cây gia phả theo quyền được cấp.",
+      "icon": "share"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "trees",
+      "label": "Gia phả đang dùng",
+      "value": 340,
+      "display": "340",
+      "detailTitle": "340 cây gia phả đang được gìn giữ",
+      "detail": "Mỗi cây gia phả là một không gian riêng để gia đình ghi lại thành viên, quan hệ và các câu chuyện chung.",
+      "highlights": ["Không gian riêng tư cho từng gia đình", "Phân quyền người cùng đóng góp", "Lưu lịch sử cập nhật"]
+    },
+    {
+      "id": "generations",
+      "label": "Thế hệ được lưu giữ",
+      "value": 12000,
+      "display": "12K+",
+      "detailTitle": "Hơn 12.000 thế hệ được kết nối",
+      "detail": "Generation giúp nối các thế hệ trong một cây trực quan để nguồn gốc và mối quan hệ luôn dễ theo dõi.",
+      "highlights": ["Hiển thị quan hệ theo thế hệ", "Dễ mở rộng thêm nhánh gia đình", "Tìm lại thông tin nhanh chóng"]
+    },
+    {
+      "id": "members",
+      "label": "Thành viên kết nối",
+      "value": 28000,
+      "display": "28K+",
+      "detailTitle": "28.000+ thành viên đang kết nối",
+      "detail": "Người thân có thể cùng xem, đóng góp tư liệu và bảo tồn những kỷ niệm có ý nghĩa cho gia đình.",
+      "highlights": ["Mời thành viên qua liên kết", "Chia sẻ ảnh và câu chuyện", "Cập nhật theo quyền được cấp"]
+    }
+  ],
+  "plans": [
+    {
+      "id": "seedling",
+      "name": "Mầm non",
+      "description": "Dành cho một nhánh gia đình.",
+      "monthlyPrice": 0,
+      "yearlyPrice": 0,
+      "featured": false,
+      "cta": "Bắt đầu miễn phí",
+      "features": ["25 thành viên", "1 GB hình ảnh", "Chia sẻ riêng tư"]
+    },
+    {
+      "id": "together",
+      "name": "Sum vầy",
+      "description": "Dành cho gia đình nhiều thế hệ.",
+      "monthlyPrice": 79000,
+      "yearlyPrice": 758400,
+      "featured": true,
+      "badge": "Phổ biến nhất",
+      "cta": "Dùng thử 14 ngày",
+      "features": ["200 thành viên", "50 GB hình ảnh", "5 quản trị viên"]
+    },
+    {
+      "id": "legacy",
+      "name": "Di sản",
+      "description": "Dành cho đại gia đình và dòng họ.",
+      "monthlyPrice": 199000,
+      "yearlyPrice": 1910400,
+      "featured": false,
+      "cta": "Trao đổi cùng chúng tôi",
+      "features": ["Thành viên không giới hạn", "500 GB hình ảnh", "Hỗ trợ ưu tiên"]
+    }
+  ],
+  "comparisonRows": [
+    { "feature": "Số thành viên", "seedling": "25", "together": "200", "legacy": "Không giới hạn" },
+    { "feature": "Dung lượng ảnh", "seedling": "1 GB", "together": "50 GB", "legacy": "500 GB" },
+    { "feature": "Xuất sơ đồ gia phả", "seedling": false, "together": true, "legacy": true },
+    { "feature": "Hỗ trợ ưu tiên", "seedling": false, "together": false, "legacy": true }
+  ],
+  "testimonials": [
+    {
+      "id": "user-generation",
+      "quote": "Trước đây mỗi người giữ một ít thông tin. Bây giờ cả gia đình có thể cùng xây dựng một cây gia phả chung.",
+      "author": "User Generation",
+      "role": "Người dùng Generation"
+    },
+    {
+      "id": "minh-anh",
+      "quote": "Mọi tư liệu của dòng họ đã có một nơi chung, dễ tìm và dễ chia sẻ cho các thế hệ sau.",
+      "author": "Minh Anh",
+      "role": "Người dùng Generation"
+    },
+    {
+      "id": "tran-family",
+      "quote": "Giao diện đơn giản giúp cả người lớn tuổi trong nhà cũng có thể cùng đóng góp câu chuyện.",
+      "author": "Gia đình Trần",
+      "role": "Người dùng Generation"
+    }
+  ],
+  "faqs": [
+    {
+      "id": "collaboration",
+      "question": "Gia đình có thể cùng chỉnh sửa không?",
+      "answer": "Có. Bạn có thể mời người thân tham gia và cấp quyền phù hợp cho từng thành viên."
+    },
+    {
+      "id": "media",
+      "question": "Có thể lưu hình ảnh và câu chuyện không?",
+      "answer": "Có. Hồ sơ thành viên có thể mở rộng với hình ảnh, tiểu sử và các sự kiện đáng nhớ."
+    },
+    {
+      "id": "free-plan",
+      "question": "Tôi có thể bắt đầu miễn phí không?",
+      "answer": "Có. Gói Mầm non cho phép bạn bắt đầu tạo cây gia phả mà không cần nâng cấp ngay."
+    }
+  ],
+  "contactSubjects": [
+    "Hỗ trợ tài khoản",
+    "Tư vấn bảng giá",
+    "Góp ý sản phẩm"
+  ],
+  "familyTrees": [
+    { "id": "nguyen-2024", "name": "Gia phả họ Nguyễn", "rootMember": "Nguyễn Văn An", "generation": 1 },
+    { "id": "tran-2023", "name": "Gia đình Trần", "rootMember": "Trần Thị Mai", "generation": 1 },
+    { "id": "le-2025", "name": "Cội nguồn họ Lê", "rootMember": "Lê Quốc Bảo", "generation": 2 },
+    { "id": "pham-001", "name": "Gia phả họ Phạm", "rootMember": "Phạm Minh Đức", "generation": 1 },
+    { "id": "hoang-002", "name": "Dòng họ Hoàng", "rootMember": "Hoàng Thu Hà", "generation": 2 },
+    { "id": "vu-003", "name": "Gia đình Vũ", "rootMember": "Vũ Thanh Nam", "generation": 1 },
+    { "id": "dang-004", "name": "Cội nguồn họ Đặng", "rootMember": "Đặng Ngọc Lan", "generation": 3 },
+    { "id": "bui-005", "name": "Gia phả họ Bùi", "rootMember": "Bùi Quang Huy", "generation": 1 },
+    { "id": "do-006", "name": "Gia đình họ Đỗ", "rootMember": "Đỗ Mỹ Duyên", "generation": 2 },
+    { "id": "ngo-007", "name": "Dòng họ Ngô", "rootMember": "Ngô Thành Long", "generation": 1 },
+    { "id": "duong-008", "name": "Gia phả họ Dương", "rootMember": "Dương Bích Ngọc", "generation": 4 },
+    { "id": "ly-009", "name": "Gia đình họ Lý", "rootMember": "Lý Hoài Phong", "generation": 2 },
+    { "id": "truong-010", "name": "Cây gia phả họ Trương", "rootMember": "Trương Kim Anh", "generation": 1 },
+    { "id": "phan-011", "name": "Gia phả họ Phan", "rootMember": "Phan Quốc Việt", "generation": 3 },
+    { "id": "cao-012", "name": "Dòng họ Cao", "rootMember": "Cao Thị Hương", "generation": 2 },
+    { "id": "luu-013", "name": "Gia đình họ Lưu", "rootMember": "Lưu Gia Bảo", "generation": 1 },
+    { "id": "ta-014", "name": "Cội nguồn họ Tạ", "rootMember": "Tạ Minh Châu", "generation": 2 },
+    { "id": "chu-015", "name": "Gia phả họ Chu", "rootMember": "Chu Khánh Linh", "generation": 3 },
+    { "id": "mai-016", "name": "Gia đình họ Mai", "rootMember": "Mai Đức Thành", "generation": 1 },
+    { "id": "ton-017", "name": "Dòng họ Tôn", "rootMember": "Tôn Như Quỳnh", "generation": 2 },
+    { "id": "ha-018", "name": "Gia phả họ Hà", "rootMember": "Hà Gia Minh", "generation": 4 },
+    { "id": "luong-019", "name": "Gia đình họ Lương", "rootMember": "Lương Thảo My", "generation": 1 },
+    { "id": "tran-020", "name": "Cội nguồn họ Trần", "rootMember": "Trần Đức Khang", "generation": 2 },
+    { "id": "nguyen-021", "name": "Gia đình Nguyễn An", "rootMember": "Nguyễn Hải Yến", "generation": 3 },
+    { "id": "le-022", "name": "Dòng họ Lê Văn", "rootMember": "Lê Thanh Tùng", "generation": 1 },
+    { "id": "pham-023", "name": "Cây gia phả Phạm Gia", "rootMember": "Phạm Bảo Trâm", "generation": 2 },
+    { "id": "hoang-024", "name": "Gia đình Hoàng Phúc", "rootMember": "Hoàng Minh Phúc", "generation": 1 },
+    { "id": "vu-025", "name": "Dòng họ Vũ miền Nam", "rootMember": "Vũ Khả Hân", "generation": 3 },
+    { "id": "dang-026", "name": "Gia phả họ Đặng", "rootMember": "Đặng Quốc Khánh", "generation": 2 },
+    { "id": "bui-027", "name": "Gia đình Bùi Thanh", "rootMember": "Bùi Ngân Hà", "generation": 1 },
+    { "id": "do-028", "name": "Cội nguồn họ Đỗ", "rootMember": "Đỗ Anh Tuấn", "generation": 4 },
+    { "id": "ngo-029", "name": "Gia phả họ Ngô", "rootMember": "Ngô Bảo Ngọc", "generation": 2 },
+    { "id": "duong-030", "name": "Dòng họ Dương", "rootMember": "Dương Thành Đạt", "generation": 1 },
+    { "id": "ly-031", "name": "Gia đình Lý Gia", "rootMember": "Lý Thùy Dương", "generation": 3 },
+    { "id": "truong-032", "name": "Cội nguồn họ Trương", "rootMember": "Trương Nhật Minh", "generation": 2 },
+    { "id": "phan-033", "name": "Gia đình Phan Hòa", "rootMember": "Phan Thu Trang", "generation": 1 },
+    { "id": "cao-034", "name": "Gia phả họ Cao", "rootMember": "Cao Minh Tâm", "generation": 2 },
+    { "id": "luu-035", "name": "Dòng họ Lưu", "rootMember": "Lưu Bảo Anh", "generation": 4 },
+    { "id": "ta-036", "name": "Gia đình họ Tạ", "rootMember": "Tạ Quốc Hưng", "generation": 1 },
+    { "id": "chu-037", "name": "Cội nguồn họ Chu", "rootMember": "Chu Thảo Nhi", "generation": 2 },
+    { "id": "mai-038", "name": "Gia phả họ Mai", "rootMember": "Mai Hoàng Long", "generation": 3 },
+    { "id": "ton-039", "name": "Gia đình họ Tôn", "rootMember": "Tôn Quỳnh Anh", "generation": 1 },
+    { "id": "ha-040", "name": "Dòng họ Hà", "rootMember": "Hà Đức Anh", "generation": 2 },
+    { "id": "luong-041", "name": "Gia phả họ Lương", "rootMember": "Lương Hải Đăng", "generation": 3 },
+    { "id": "kieu-042", "name": "Gia đình họ Kiều", "rootMember": "Kiều Ngọc Mai", "generation": 1 },
+    { "id": "vo-043", "name": "Dòng họ Võ", "rootMember": "Võ Thành Nhân", "generation": 2 },
+    { "id": "huynh-044", "name": "Gia phả họ Huỳnh", "rootMember": "Huỳnh Thanh Thủy", "generation": 4 },
+    { "id": "quach-045", "name": "Gia đình họ Quách", "rootMember": "Quách Minh Khoa", "generation": 1 },
+    { "id": "lam-046", "name": "Cội nguồn họ Lâm", "rootMember": "Lâm Bích Hạnh", "generation": 2 },
+    { "id": "dinh-047", "name": "Gia phả họ Đinh", "rootMember": "Đinh Quốc Toàn", "generation": 3 },
+    { "id": "la-048", "name": "Gia đình họ La", "rootMember": "La Khánh Vy", "generation": 1 },
+    { "id": "mach-049", "name": "Dòng họ Mạch", "rootMember": "Mạch Gia Hân", "generation": 2 },
+    { "id": "vien-050", "name": "Gia phả họ Viên", "rootMember": "Viên Đức Phúc", "generation": 3 }
+  ]
+}

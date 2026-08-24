@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cây gia phả — Generation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <script>(function(){const saved=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches)})()</script>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav-container" aria-label="Điều hướng chính">
+        <a href="index.html" class="brand" aria-label="Generation - Trang chủ"><span class="brand-mark">G</span><span class="brand-name">Generation</span></a>
+        <ul class="nav-menu"><li><a href="index.html#tinh-nang">Tính năng</a></li><li><a class="nav-current" href="family-tree.html">Cây gia phả</a></li><li><a href="pricing.html">Bảng giá</a></li><li><a href="contact.html">Liên hệ</a></li></ul>
+        <div class="nav-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Đổi giao diện sáng tối">◐</button><a class="btn btn-primary nav-cta" href="#tao-cay">Tạo gia phả</a><button class="menu-button" type="button" data-menu-toggle aria-controls="mobile-menu" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      </nav>
+      <div class="mobile-menu hidden" id="mobile-menu"><a href="index.html#tinh-nang">Tính năng</a><a href="family-tree.html" aria-current="page">Cây gia phả</a><a href="pricing.html">Bảng giá</a><a href="contact.html">Liên hệ</a><a href="#tao-cay" class="btn btn-primary">Tạo gia phả</a></div>
+    </header>
+    <main>
+      <section class="family-hero section">
+        <div class="container family-hero-layout">
+          <div><p class="eyebrow">Không gian gia đình</p><h1>Cây gia phả của bạn, bắt đầu từ một câu chuyện.</h1><p class="family-lead">Khám phá những nội dung Generation đang lưu giữ, sau đó tạo cây gia phả đầu tiên cho gia đình bạn.</p></div>
+          <div class="family-summary" aria-live="polite" data-record-summary><span class="loading-dot" aria-hidden="true"></span><p>Đang tải dữ liệu Generation…</p></div>
+        </div>
+      </section>
+      <section class="section family-records" aria-labelledby="records-title">
+        <div class="container"><div class="section-heading"><p class="eyebrow">Dữ liệu Generation</p><h2 id="records-title">Những gì bạn có thể lưu giữ</h2><p id="records-status" role="status">Đang tải dữ liệu…</p></div><div class="record-grid record-skeleton" data-record-loading aria-hidden="true"><span></span><span></span><span></span></div><div class="record-grid" data-record-grid role="tablist" aria-label="Chỉ số Generation"></div><section class="record-detail" data-record-detail aria-live="polite" aria-labelledby="record-detail-title"></section></div>
+      </section>
+      <section id="tao-cay" class="section tree-builder-section" aria-labelledby="tree-builder-title">
+        <div class="container tree-builder-layout">
+          <div class="tree-builder-copy"><p class="eyebrow">Tạo cây gia phả</p><h2 id="tree-builder-title">Thêm thành viên đầu tiên</h2><p>Bắt đầu từ người gốc của gia đình. Bạn có thể bổ sung thế hệ, hình ảnh và câu chuyện sau khi tạo cây.</p><ul class="builder-steps"><li>Chọn tên cây gia phả</li><li>Thêm thành viên gốc</li><li>Mời người thân cùng đóng góp</li></ul></div>
+          <form class="tree-builder-form" data-tree-form novalidate><div><label for="tree-name">Tên cây gia phả</label><input id="tree-name" name="treeName" required minlength="3" placeholder="Ví dụ: Gia phả họ Nguyễn" aria-describedby="tree-name-error" /><p class="field-error" id="tree-name-error"></p></div><div><label for="root-member">Thành viên gốc</label><input id="root-member" name="rootMember" required minlength="3" placeholder="Họ và tên" aria-describedby="root-member-error" /><p class="field-error" id="root-member-error"></p></div><div><label for="root-generation">Thế hệ</label><select id="root-generation" name="generation"><option value="1">Thế hệ 1</option><option value="2">Thế hệ 2</option></select></div><button class="btn btn-primary" type="submit">Tạo cây gia phả</button><p class="form-result" data-tree-result role="status"></p></form>
+        </div>
+      </section>
+      <section class="section tree-list-section" aria-labelledby="tree-list-title"><div class="container"><div class="tree-list-heading"><div><p class="eyebrow">Cây đã tạo</p><h2 id="tree-list-title">Danh sách cây gia phả</h2></div><button class="btn btn-secondary" type="button" data-restore-trees>Khôi phục dữ liệu mẫu</button></div><div class="tree-tools"><div><label class="tree-search-label" for="tree-search">Tìm cây gia phả</label><input class="tree-search" id="tree-search" type="search" data-tree-search placeholder="Nhập tên cây hoặc thành viên gốc" /></div><div><label class="tree-search-label" for="tree-generation-filter">Lọc thế hệ</label><select class="tree-select" id="tree-generation-filter" data-tree-filter><option value="all">Tất cả thế hệ</option><option value="1">Thế hệ 1</option><option value="2">Thế hệ 2</option><option value="3">Thế hệ 3</option><option value="4">Thế hệ 4</option></select></div><div><label class="tree-search-label" for="tree-sort">Sắp xếp</label><select class="tree-select" id="tree-sort" data-tree-sort><option value="name-asc">Tên A–Z</option><option value="name-desc">Tên Z–A</option><option value="generation-asc">Thế hệ tăng dần</option><option value="generation-desc">Thế hệ giảm dần</option></select></div></div><p class="tree-list-status" data-tree-list-status role="status"></p><div class="tree-empty" data-tree-empty hidden><h3>Chưa có cây gia phả phù hợp</h3><p>Hãy thay đổi từ khóa, bộ lọc hoặc tạo một cây gia phả mới.</p></div><div class="tree-table-wrap"><table><thead><tr><th>Tên cây gia phả</th><th>Thành viên gốc</th><th>Thế hệ</th><th><span class="sr-only">Thao tác</span></th></tr></thead><tbody data-tree-list></tbody></table></div></div></section>
+    </main>
+    <footer class="site-footer"><div class="footer-layout"><div class="footer-brand"><a href="index.html" class="brand"><span class="brand-mark">G</span><span class="brand-name">Generation</span></a><p>Lưu giữ cội nguồn cho hôm nay và mai sau.</p></div><div class="footer-group"><h3>Sản phẩm</h3><ul><li><a href="index.html#tinh-nang">Tính năng</a></li><li><a href="pricing.html">Bảng giá</a></li></ul></div><div class="footer-group"><h3>Hỗ trợ</h3><ul><li><a href="contact.html">Liên hệ</a></li></ul></div><div class="footer-group"><h3>Liên hệ</h3><address>TP. Hồ Chí Minh<br>Việt Nam</address></div></div><div class="footer-bottom"><div class="footer-bottom-content"><span>Nhà phát triển Generation</span><span>Lưu giữ cội nguồn gia đình.</span></div></div></footer>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/family-tree.js"></script>
+    <template id="tree-row-template"><tr><td data-cell="name"></td><td data-cell="root"></td><td data-cell="generation"></td><td><button class="tree-delete" type="button" data-delete-tree>Xóa</button></td></tr></template>
+  </body>
+</html>
