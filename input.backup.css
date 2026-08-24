@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand: #287a63;
+  --color-brand-deep: #185443;
+  --color-ink: #12211d;
+  --color-ink-soft: #587068;
+  --color-ink-invert: #eaf2ee;
+  --color-line: #dfe6e2;
+  --color-line-invert: #24403a;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f8f6;
+  --color-surface-dark: #0e1c19;
+  --color-surface-dark-alt: #142824;
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --radius-card: 1rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply min-w-0 bg-surface font-body text-ink antialiased dark:bg-surface-dark dark:text-ink-invert;
+  }
+  * {
+    @apply border-line dark:border-line-invert;
+  }
+}
+
+@layer components {
+  .section {
+    @apply px-5 py-16 sm:px-8 lg:py-24;
+  }
+  .container {
+    @apply mx-auto w-full max-w-6xl;
+  }
+  .eyebrow {
+    @apply mb-3 inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-bold tracking-widest text-brand uppercase dark:bg-brand/20;
+  }
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition focus-visible:ring-3 focus-visible:ring-brand/40 focus-visible:outline-none;
+  }
+  .btn-primary {
+    @apply bg-brand text-white hover:bg-brand-deep;
+  }
+  .btn-ghost {
+    @apply border border-line bg-surface text-ink hover:bg-surface-alt dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert dark:hover:bg-surface-dark-alt;
+  }
+  .card {
+    @apply rounded-card border border-line bg-surface p-6 dark:border-line-invert dark:bg-surface-dark-alt;
+  }
+  .badge {
+    @apply inline-flex rounded-full bg-brand/10 px-3 py-1 text-xs font-bold text-brand dark:bg-brand/20;
+  }
+  .field-label {
+    @apply mb-2 block text-sm font-semibold text-ink dark:text-ink-invert;
+  }
+  .field-input {
+    @apply w-full rounded-lg border border-line bg-surface px-3.5 py-3 text-sm text-ink outline-none transition placeholder:text-ink-soft focus:border-brand focus:ring-3 focus:ring-brand/20 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert;
+  }
+  .field-error {
+    @apply mt-1 min-h-4 text-xs text-red-600;
+  }
+}
