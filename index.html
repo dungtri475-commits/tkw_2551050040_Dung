@@ -12,12 +12,14 @@
 
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
       <link rel="stylesheet" href="./dist/output.css">
+      <script>(function(){const saved=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',saved?saved==='dark':matchMedia('(prefers-color-scheme: dark)').matches)})()</script>
 </head>
 
 <body>
+      <div id="nav-sentinel" data-to-top-sentinel aria-hidden="true"></div>
       <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
 
       <!--Navbar-->
@@ -42,14 +44,14 @@
                         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Chuyển giao diện sáng tối">◐</button>
                         <a href="#dang-nhap" class="login-link">Đăng nhập</a>
                         <a href="#bat-dau" class="btn btn-primary nav-cta">Tạo gia phả</a>
-                        <button class="menu-button" type="button" aria-label="Mở menu" aria-expanded="false">
+                        <button class="menu-button" type="button" data-menu-toggle aria-controls="mobile-menu" aria-label="Mở menu" aria-expanded="false">
                               <span></span><span></span><span></span>
                         </button>
                   </div>
             </nav>
 
             <!--Mobile menu-->
-            <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu hidden" id="mobile-menu">
                   <a href="#tinh-nang">Tính năng</a>
                   <a href="pricing.html">Bảng giá</a>
                   <a href="#cay-gia-pha">Cây gia phả</a>
@@ -153,7 +155,7 @@
                         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                               <article class="feature-card">
                                     <div class="icon-box" aria-hidden="true">
-                                          <svg viewBox="0 0 24 24">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true">
                                                 <path d="M12 20V4M5 9l7-5 7 5M5 15l7 5 7-5" />
                                           </svg>
                                     </div>
@@ -163,7 +165,7 @@
 
                               <article class="feature-card">
                                     <div class="icon-box" aria-hidden="true">
-                                          <svg viewBox="0 0 24 24">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true">
                                                 <path d="M4 7h16M4 12h16M4 17h10" />
                                           </svg>
                                     </div>
@@ -173,7 +175,7 @@
 
                               <article class="feature-card">
                                     <div class="icon-box" aria-hidden="true">
-                                          <svg viewBox="0 0 24 24">
+                                          <svg viewBox="0 0 24 24" aria-hidden="true">
                                                 <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" />
                                           </svg>
                                     </div>
@@ -262,8 +264,8 @@
             </section>
 
             <!-- 06. Testimonial -->
-            <section id="cam-nhan" class="section-padded section-base" aria-labelledby="cam-nhan-title">
-                  <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+            <section id="cam-nhan" class="section-padded section-base" data-reveal aria-labelledby="cam-nhan-title">
+                  <div class="testimonial-layout mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 lg:items-center">
                         <div>
                               <p class="eyebrow">Câu chuyện từ người dùng</p>
                               <h2 id="cam-nhan-title" class="feature-heading">
@@ -271,15 +273,13 @@
                               </h2>
                         </div>
 
-                        <figure class="testimonial-card">
-                              <blockquote>
-                                    “Trước đây mỗi người giữ một ít thông tin. Bây giờ cả gia đình có thể cùng xây dựng một cây gia phả chung.”
-                              </blockquote>
-                              <figcaption>
-                                    <strong>User Generation</strong>
-                                    <span>Người dùng Generation</span>
-                              </figcaption>
-                        </figure>
+                        <div class="slider" data-slider aria-label="Cảm nhận người dùng">
+                              <div class="slider-viewport"><div class="slider-track" data-slider-track>
+                                    <figure class="testimonial-card" data-slide><blockquote>“Trước đây mỗi người giữ một ít thông tin. Bây giờ cả gia đình có thể cùng xây dựng một cây gia phả chung.”</blockquote><figcaption><cite>User Generation</cite><span>Người dùng Generation</span></figcaption></figure>
+                                    <figure class="testimonial-card" data-slide><blockquote>“Mọi tư liệu của dòng họ đã có một nơi chung, dễ tìm và dễ chia sẻ cho các thế hệ sau.”</blockquote><figcaption><cite>Minh Anh</cite><span>Người dùng Generation</span></figcaption></figure>
+                                    <figure class="testimonial-card" data-slide><blockquote>“Giao diện đơn giản giúp cả người lớn tuổi trong nhà cũng có thể cùng đóng góp câu chuyện.”</blockquote><figcaption><cite>Gia đình Trần</cite><span>Người dùng Generation</span></figcaption></figure>
+                              </div></div><div class="slider-controls"><button type="button" data-slider-prev aria-label="Cảm nhận trước">←</button><div data-slider-dots></div><button type="button" data-slider-next aria-label="Cảm nhận tiếp theo">→</button></div>
+                        </div>
                   </div>
             </section>
 
@@ -291,7 +291,7 @@
                               <h2 id="so-lieu-title" class="feature-heading">Gia phả được lưu giữ mỗi ngày</h2>
                         </div>
 
-                        <dl class="grid grid-cols-1 divide-y divide-[var(--line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                        <dl class="metric-list grid grid-cols-1 divide-y sm:grid-cols-3 sm:divide-x sm:divide-y-0">
                               <div class="metric-item">
                                     <dt>Gia phả đang dùng</dt>
                                     <dd class="order-2">340</dd>
@@ -309,7 +309,7 @@
             </section>
 
             <!-- 08. Pricing -->
-            <section id="bang-gia" class="section-padded section-base" aria-labelledby="bang-gia-title">
+            <section id="bang-gia" class="section-padded section-base" data-reveal aria-labelledby="bang-gia-title">
                   <div class="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5">
                         <div class="mx-auto max-w-2xl text-center">
                               <p class="eyebrow mx-auto">Gói sử dụng</p>
@@ -320,7 +320,7 @@
                         </div>
 
                         <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
-                              <article class="pricing-card">
+                              <article class="pricing-card h-full">
                                     <div class="pricing-header">
                                           <h3>Cơ bản</h3>
                                           <p>Dành cho gia đình nhỏ</p>
@@ -334,7 +334,7 @@
                                     <a href="#bat-dau" class="btn btn-secondary mt-auto">Chọn gói này</a>
                               </article>
 
-                              <article class="pricing-card pricing-featured">
+                              <article class="pricing-card pricing-featured h-full">
                                     <span class="pricing-badge">Được chọn nhiều nhất</span>
                                     <div class="pricing-header">
                                           <h3>Gia đình</h3>
@@ -350,7 +350,7 @@
                                     <a href="#bat-dau" class="btn btn-primary mt-auto">Chọn gói này</a>
                               </article>
 
-                              <article class="pricing-card">
+                              <article class="pricing-card h-full">
                                     <div class="pricing-header">
                                           <h3>Dòng họ</h3>
                                           <p>Dành cho cộng đồng lớn</p>
@@ -370,7 +370,7 @@
 
             <!-- 09. FAQ -->
             <section id="faq" class="section-padded section-alt" aria-labelledby="faq-title">
-                  <div class="mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5 lg:grid-cols-[.8fr_1.2fr]">
+                  <div class="faq-layout mx-auto grid w-full max-w-6xl grid-cols-1 gap-10 px-5">
                         <div>
                               <p class="eyebrow">Câu hỏi thường gặp</p>
                               <h2 id="faq-title" class="feature-heading">Bạn muốn biết thêm?</h2>
@@ -452,8 +452,9 @@
                   </div>
             </footer>
 
-      </main>
-<script>document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => document.documentElement.classList.toggle("dark"));</script>
+</main>
+<button class="to-top" type="button" data-to-top hidden aria-label="Lên đầu trang">↑</button>
+<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
